@@ -71,7 +71,7 @@ function createCircleLayout(containerId, numberOfAvatars) {
         container.appendChild(avatarContainer);
 
         // Add the click event listener for highlighting
-        avatarContainer.addEventListener('click', () => {
+        avatarContainer.addEventListener('mouseover', () => {
             highlightAvatar(i); // Highlight the clicked avatar
         });
     }
@@ -79,7 +79,7 @@ function createCircleLayout(containerId, numberOfAvatars) {
 
 function highlightAvatar(index) {
     // Remove the 'highlighted' class from all avatars
-    console.log(`We are highlighting ${people[index].name}`);
+    //console.log(`We are highlighting ${people[index].name}`);
     const allAvatars = document.querySelectorAll('.avatar'); // Now targeting the images with 'avatar' class
     allAvatars.forEach(avatar => {
         avatar.classList.remove('highlighted');
